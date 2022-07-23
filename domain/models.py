@@ -1,4 +1,5 @@
 import datetime
+import uuid
 from enum import Enum
 
 
@@ -23,6 +24,7 @@ class User:
             pictures: list[Picture] = []
 
     ):
+        self.id = uuid.uuid4()
         self.date_of_birth = date_of_birth
         self.sex = sex
         self.description = description
@@ -46,6 +48,7 @@ class Chirp:
 
 
                  ):
+        self.uuid = uuid.uuid4()
         self.pictures = pictures
         self.is_deleted = is_deleted
         self.is_draft = is_draft
