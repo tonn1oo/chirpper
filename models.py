@@ -16,14 +16,14 @@ class User:
             self,
             login: str,
             name: str,
-            sex: Sex,
-            born_date: datetime.datetime,
-            description: str,
-            avatar: Picture,
-            pictures: list[Picture]
+            sex: Sex = None,
+            date_of_birth: datetime.datetime = None,
+            description: str = '',
+            avatar: Picture = None,
+            pictures: list[Picture] = []
 
     ):
-        self.born_date = born_date
+        self.date_of_birth = date_of_birth
         self.sex = sex
         self.description = description
         self.login = login

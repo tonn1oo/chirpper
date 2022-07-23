@@ -5,7 +5,7 @@ from models import Chirp, User
 
 def test_create_chirp():
     now = datetime.datetime.now()
-    user = User('Anton')
+    user = User('tonnioo', 'Anton')
     chirp = Chirp(
 
         author=user,
@@ -22,5 +22,6 @@ def test_create_chirp():
 
 
 def test_create_user():
-    user = User('Anton')
+    user = User('tonnioo', 'Anton')
+    assert user.login == 'tonnioo'
     assert user.name == 'Anton'
