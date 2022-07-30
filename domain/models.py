@@ -58,3 +58,6 @@ class Chirp:
         self.text = text
         self.replies = replies
         self.publish_date = publish_date
+
+    def __eq__(self, other: 'Chirp'):
+        return self.uuid == other.uuid
